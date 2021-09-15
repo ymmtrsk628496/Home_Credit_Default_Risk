@@ -226,7 +226,7 @@ def installments_payments(nan_as_category: bool = True) -> pd.DataFrame:
     return ins_agg
 
 # Preprocess credit_card_balance.csv
-def credit_card_balance(nan_as_category: bool = True) -> pd.DataFrame:
+def credit_card_balance(nan_as_category: bool = True) -> pd.DataFrame: 
     cc = pd.read_csv('../input/credit_card_balance.csv')
     cc, cat_cols = one_hot_encoder(cc, nan_as_category=nan_as_category)
     # General aggregations
